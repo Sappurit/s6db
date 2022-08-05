@@ -6,63 +6,59 @@
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/png" href="icon.png" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" />
-<link rel="stylesheet" href="theme.blue.css">
-<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="jquery.tablesorter.min.js"></script>
-<script type="text/javascript" src="jquery.tablesorter.widgets.min.js"></script>
+<link rel="stylesheet" href="css/theme.blue.css">
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.widgets.min.js"></script>
+<script type="text/javascript" src="js/widget-cssStickyHeaders.min.js"></script>
 <style>
 #title             { border: 0px solid red;  padding: 0px; margin: 20px 0;      width: 1200px; font: bold   36px 'Roboto'; color: #000000; }
 #text              { border: 0px solid blue; padding: 0px; margin-bottom: 20px; width: 1200px; font: normal 16px 'Roboto'; color: #000000; }
 #text a            { text-decoration: none; color: #000000; }
-#content           { border: 0px solid blue; padding: 0px; width: 3500px; }
+#content           { border: 0px solid blue; padding: 0px; width: 2400px; }
 
 kbd                { border: 1px solid #000; padding: 2px; border-radius: 3px; }
 
-#myTable                                                 {  }
+#myTable                                                 { width: fit-content; }
 #myTable a                                               { text-decoration: none; color: #000000; }
-#myTable th                                              { padding: 5px; font: bold   12px 'Roboto'; color: #000000; }
-#myTable td                                              { padding: 5px; font: normal 12px 'Roboto'; color: #000000; }
+#myTable th                                              { font: bold   12px 'Roboto'; color: #000000; padding: 5px; }
+#myTable td                                              { font: normal 12px 'Roboto'; color: #000000; padding: 5px; }
 #myTable th:nth-of-type(1),  #myTable td:nth-of-type(1)  { width:  55px; } #myTable td:nth-of-type(1)  { text-align: right;  }
-#myTable th:nth-of-type(2),  #myTable td:nth-of-type(2)  { width:  55px; } #myTable td:nth-of-type(2)  { text-align: right;  }
-#myTable th:nth-of-type(3),  #myTable td:nth-of-type(3)  { width:  35px; } #myTable td:nth-of-type(3)  { text-align: right;  }
-#myTable th:nth-of-type(4),  #myTable td:nth-of-type(4)  { width:  35px; }
-#myTable th:nth-of-type(5),  #myTable td:nth-of-type(5)  { width:  70px; }
+#myTable th:nth-of-type(2),  #myTable td:nth-of-type(2)  { width:  44px; } #myTable td:nth-of-type(2)  { text-align: right;  }
+#myTable th:nth-of-type(3),  #myTable td:nth-of-type(3)  { width:  32px; } #myTable td:nth-of-type(3)  { text-align: right;  }
+#myTable th:nth-of-type(4),  #myTable td:nth-of-type(4)  { width:  32px; }
+#myTable th:nth-of-type(5),  #myTable td:nth-of-type(5)  { width:  60px; }
 #myTable th:nth-of-type(6),  #myTable td:nth-of-type(6)  { width: 120px; }
 #myTable th:nth-of-type(7),  #myTable td:nth-of-type(7)  { width:  70px; }
 #myTable th:nth-of-type(8),  #myTable td:nth-of-type(8)  { width: 200px; }
 #myTable th:nth-of-type(9),  #myTable td:nth-of-type(9)  { width: 170px; }
-#myTable th:nth-of-type(10), #myTable td:nth-of-type(10) { width: 155px; }
-#myTable th:nth-of-type(11), #myTable td:nth-of-type(11) { width: 135px; }
-#myTable th:nth-of-type(12), #myTable td:nth-of-type(12) { width: 105px; }
-#myTable th:nth-of-type(13), #myTable td:nth-of-type(13) { width:  40px; } #myTable td:nth-of-type(13) { text-align: center; }
+#myTable th:nth-of-type(10), #myTable td:nth-of-type(10) { width: 150px; }
+#myTable th:nth-of-type(11), #myTable td:nth-of-type(11) { width: 130px; }
+#myTable th:nth-of-type(12), #myTable td:nth-of-type(12) { width:  94px; }
+#myTable th:nth-of-type(13), #myTable td:nth-of-type(13) { width:  38px; } #myTable td:nth-of-type(13) { text-align: center; }
 #myTable th:nth-of-type(14), #myTable td:nth-of-type(14) { width: 150px; }
 #myTable th:nth-of-type(15), #myTable td:nth-of-type(15) { width: 200px; }
-#myTable th:nth-of-type(16), #myTable td:nth-of-type(16) { width:  45px; } #myTable td:nth-of-type(16) { text-align: center; }
-#myTable th:nth-of-type(17), #myTable td:nth-of-type(17) { width:  45px; } #myTable td:nth-of-type(17) { text-align: center; }
-#myTable th:nth-of-type(18), #myTable td:nth-of-type(18) { width:  50px; } #myTable td:nth-of-type(18) { text-align: center; }
-#myTable th:nth-of-type(19), #myTable td:nth-of-type(19) { width:  50px; } #myTable td:nth-of-type(19) { text-align: center; }
-#myTable th:nth-of-type(20), #myTable td:nth-of-type(20) { width:  55px; } #myTable td:nth-of-type(20) { text-align: center; }
-#myTable th:nth-of-type(21), #myTable td:nth-of-type(21) { width:  40px; } #myTable td:nth-of-type(21) { text-align: center; }
-#myTable th:nth-of-type(22), #myTable td:nth-of-type(22) { width:  40px; } #myTable td:nth-of-type(22) { text-align: center; }
-#myTable th:nth-of-type(23), #myTable td:nth-of-type(23) { width:  35px; } #myTable td:nth-of-type(23) { text-align: right;  }
-#myTable th:nth-of-type(24), #myTable td:nth-of-type(24) { width:  35px; } #myTable td:nth-of-type(24) { text-align: right;  }
-#myTable th:nth-of-type(25), #myTable td:nth-of-type(25) { width:  35px; } #myTable td:nth-of-type(25) { text-align: right;  }
-#myTable th:nth-of-type(26), #myTable td:nth-of-type(26) { width:  35px; } #myTable td:nth-of-type(26) { text-align: right;  }
-#myTable th:nth-of-type(27), #myTable td:nth-of-type(27) { width:  35px; } #myTable td:nth-of-type(27) { text-align: right;  }
-
-.poster_imdb                                             { border: 0px solid red; width:  50px; height: 72px; display: block; object-fit: cover; }
-.poster_nf                                               { border: 0px solid red; width: 128px; height: 72px; display: block; }
-
+#myTable th:nth-of-type(16), #myTable td:nth-of-type(16) { width:  44px; } #myTable td:nth-of-type(16) { text-align: center; }
+#myTable th:nth-of-type(17), #myTable td:nth-of-type(17) { width:  43px; } #myTable td:nth-of-type(17) { text-align: center; }
+#myTable th:nth-of-type(18), #myTable td:nth-of-type(18) { width:  48px; } #myTable td:nth-of-type(18) { text-align: center; }
+#myTable th:nth-of-type(19), #myTable td:nth-of-type(19) { width:  48px; } #myTable td:nth-of-type(19) { text-align: center; }
+#myTable th:nth-of-type(20), #myTable td:nth-of-type(20) { width:  54px; } #myTable td:nth-of-type(20) { text-align: center; }
+#myTable th:nth-of-type(21), #myTable td:nth-of-type(21) { width:  36px; } #myTable td:nth-of-type(21) { text-align: center; }
+#myTable th:nth-of-type(22), #myTable td:nth-of-type(22) { width:  36px; } #myTable td:nth-of-type(22) { text-align: center; }
+#myTable th:nth-of-type(23), #myTable td:nth-of-type(23) { width:  28px; } #myTable td:nth-of-type(23) { text-align: right;  }
+#myTable th:nth-of-type(24), #myTable td:nth-of-type(24) { width:  28px; } #myTable td:nth-of-type(24) { text-align: right;  }
+#myTable th:nth-of-type(25), #myTable td:nth-of-type(25) { width:  28px; } #myTable td:nth-of-type(25) { text-align: right;  }
+#myTable th:nth-of-type(26), #myTable td:nth-of-type(26) { width:  28px; } #myTable td:nth-of-type(26) { text-align: right;  }
+#myTable th:nth-of-type(27), #myTable td:nth-of-type(27) { width:  28px; } #myTable td:nth-of-type(27) { text-align: right;  }
 </style>
 </head>
 <body>
 <div id="title">FIFA Mobile Database 2022 (Season 6) | Advanced Search</div>
 <div id="text">
-* Stamina same as console. Base and Event cards are same. Icon cards same as middle version on console.<br>
 * I will not update the old data. It takes many hours to re-check. Unless someone finds the invalid values.<br>
 * All data are subject to change without notice. Use at your own risk.<br>
 <br>
-Tip: Sort multiple columns by holding down the <kbd>Shift</kbd> key and clicking a column header.
+Tip: Sort multiple columns by holding down the <kbd>Ctrl</kbd> key and clicking a column header.
 </div>
 <div id="content">
 <table id="myTable" class="tablesorter">
@@ -58979,19 +58975,17 @@ $(function() {
 	$("#myTable").tablesorter({
 
 		theme : 'blue',
+		sortResetKey : 'altKey',
+		sortMultiSortKey : 'ctrlKey',
 
-		// initial sort columns where columnIndex is a zero-based index for your columns left-to-right and 
+		// columnIndex is a zero-based index from left-to-right.
 		// sortDirection is 0 for Ascending and 1 for Descending.
 		sortList: [[0,1]],
 
-		// widget code contained in the jquery.tablesorter.widgets.js file
-		// use the zebra stripe widget if you plan on hiding any rows (filter widget)
-		widgets : [ 'filter', 'zebra' ],
+		widgets : [ 'filter', 'zebra', 'cssStickyHeaders' ],
 
 		widgetOptions : {
-			// using the default zebra striping class name, so it actually isn't included in the theme variable above
-			// this is ONLY needed for materialize theming if you are using the filter widget, because rows are hidden
-			zebra : ['even', 'odd'],
+
 		}
 	});
 });
@@ -58999,7 +58993,7 @@ $(function() {
 
 <pre>
 Author  : Sappurit
-Updated : 5-Aug-2022 02:10:15
+Updated : 6-Aug-2022 00:56:38
 Total   : 2030
 </pre>
 </body>
