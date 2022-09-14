@@ -4,7 +4,8 @@
 <title>FIFA Mobile Database 2022 (Season 6) | Advanced Search</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<link rel="icon" type="image/png" href="icon.png" />
+<meta name="google-site-verification" content="xZagczRHiktytftzhSg8nLj5b8yEDIEJ8sVYaKxsRvA" />
+<link rel="icon" type="image/png" href="icon/icon_100.png" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" />
 <link rel="stylesheet" href="css/theme.blue.css">
 <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
@@ -12,26 +13,29 @@
 <script type="text/javascript" src="js/jquery.tablesorter.widgets.min.js"></script>
 <script type="text/javascript" src="js/widget-cssStickyHeaders.min.js"></script>
 <style>
-#title             { border: 0px solid red;  padding: 0px; margin: 20px 0;      width: 1200px; font: bold   36px 'Roboto'; color: #000000; }
-#text              { border: 0px solid blue; padding: 0px; margin-bottom: 20px; width: 1200px; font: normal 16px 'Roboto'; color: #000000; }
-#text a            { text-decoration: none; color: #000000; }
-#content           { border: 0px solid blue; padding: 0px; width: 2400px; }
+#title     { border: 0px solid red;  padding: 0px; margin: 20px 0;      width: 1200px; font: bold   36px 'Roboto'; color: #000000; }
+#wrapper   { display: flex; flex-wrap: wrap; }
+#text      { border: 0px solid blue; padding: 0px; margin-bottom: 20px; width:  750px; font: normal 16px 'Roboto'; color: #000000; }
+#text a    { text-decoration: none; color: #000000; }
+#text li   { line-height: 1.4; }
+#telegram  { border: 0px solid blue; padding: 0px; margin-bottom: 20px; width:  500px; font: normal 16px 'Roboto'; color: #000000; }
+#content   { border: 0px solid blue; padding: 0px; width: 2400px; }
 
-kbd                { border: 1px solid #000; padding: 2px; border-radius: 3px; }
+kbd        { border: 1px solid #000; padding: 1px 2px; border-radius: 3px; }
 
 #myTable                                                 { width: fit-content; }
 #myTable a                                               { text-decoration: none; color: #000000; }
 #myTable th                                              { font: bold   12px 'Roboto'; color: #000000; padding: 5px; }
 #myTable td                                              { font: normal 12px 'Roboto'; color: #000000; padding: 5px; }
-#myTable th:nth-of-type(1),  #myTable td:nth-of-type(1)  { width:  55px; } #myTable td:nth-of-type(1)  { text-align: right;  }
-#myTable th:nth-of-type(2),  #myTable td:nth-of-type(2)  { width:  44px; } #myTable td:nth-of-type(2)  { text-align: right;  }
-#myTable th:nth-of-type(3),  #myTable td:nth-of-type(3)  { width:  32px; } #myTable td:nth-of-type(3)  { text-align: right;  }
-#myTable th:nth-of-type(4),  #myTable td:nth-of-type(4)  { width:  32px; }
-#myTable th:nth-of-type(5),  #myTable td:nth-of-type(5)  { width:  60px; }
-#myTable th:nth-of-type(6),  #myTable td:nth-of-type(6)  { width: 120px; }
-#myTable th:nth-of-type(7),  #myTable td:nth-of-type(7)  { width:  70px; }
-#myTable th:nth-of-type(8),  #myTable td:nth-of-type(8)  { width: 200px; }
-#myTable th:nth-of-type(9),  #myTable td:nth-of-type(9)  { width: 170px; }
+#myTable th:nth-of-type(1),  #myTable td:nth-of-type(01) { width:  55px; } #myTable td:nth-of-type(01)  { text-align: right;  }
+#myTable th:nth-of-type(2),  #myTable td:nth-of-type(02) { width:  44px; } #myTable td:nth-of-type(02)  { text-align: right;  }
+#myTable th:nth-of-type(3),  #myTable td:nth-of-type(03) { width:  32px; } #myTable td:nth-of-type(03)  { text-align: right;  }
+#myTable th:nth-of-type(4),  #myTable td:nth-of-type(04) { width:  32px; }
+#myTable th:nth-of-type(5),  #myTable td:nth-of-type(05) { width:  60px; }
+#myTable th:nth-of-type(6),  #myTable td:nth-of-type(06) { width: 120px; }
+#myTable th:nth-of-type(7),  #myTable td:nth-of-type(07) { width:  70px; }
+#myTable th:nth-of-type(8),  #myTable td:nth-of-type(08) { width: 200px; }
+#myTable th:nth-of-type(9),  #myTable td:nth-of-type(09) { width: 170px; }
 #myTable th:nth-of-type(10), #myTable td:nth-of-type(10) { width: 150px; }
 #myTable th:nth-of-type(11), #myTable td:nth-of-type(11) { width: 130px; }
 #myTable th:nth-of-type(12), #myTable td:nth-of-type(12) { width:  94px; }
@@ -54,12 +58,21 @@ kbd                { border: 1px solid #000; padding: 2px; border-radius: 3px; }
 </head>
 <body>
 <div id="title">FIFA Mobile Database 2022 (Season 6) | Advanced Search</div>
+
+<div id="wrapper">
 <div id="text">
-* I will not update the old data. It takes many hours to re-check. Unless someone finds the invalid values.<br>
-* All data are subject to change without notice. Use at your own risk.<br>
-<br>
-Tip: Sort multiple columns by holding down the <kbd>Ctrl</kbd> key and clicking a column header.
+	<ul>
+	<li>All data are subject to change without notice. Use at your own risk.</li>
+	<li>I will not update the old data. It takes many hours to re-check.</li>
+	<li>Report the invalid values to me at <a href="https://twitter.com/messages/compose?recipient_id=816181718218477569" class="twitter-dm-button">@Sappurit</a><script async src="https://platform.twitter.com/widgets.js"></script></li>
+	</ul>
+	Tip: Sort multiple columns by holding down the <kbd>Ctrl</kbd> key and clicking a column header.
 </div>
+<div id="telegram">
+	<iframe style="border:0px;height:370px;width:400px;margin:10px;box-shadow: 0 0 10px 3px rgba(0,0,0,.2);" src="https://xn--r1a.website/s/FIFA_Mobile_Database"></iframe>
+</div>
+</div>
+
 <div id="content">
 <table id="myTable" class="tablesorter">
 <thead>
@@ -64938,7 +64951,7 @@ $(function() {
 
 <pre>
 Author  : Sappurit
-Updated : 14-Sep-2022 02:03:25
+Updated : 14-Sep-2022 17:56:04
 Total   : 2235
 </pre>
 </body>
